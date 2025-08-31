@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Secure eVoting Platform Design System - Indian Heritage & Digital Democracy
+All colors MUST be HSL inspired by Indian flag and culture.
+*/
+
+@layer base {
+  :root {
+    /* Indian-inspired theme for trust and national identity */
+    --background: 0 0% 99%;
+    --foreground: 210 30% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 8%;
+
+    /* Primary: Saffron from Indian flag */
+    --primary: 23 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 23 100% 80%;
+
+    /* Secondary: Navy blue from Ashoka Chakra */
+    --secondary: 210 30% 8%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Success: Indian flag green */
+    --success: 125 100% 25%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 125 100% 80%;
+
+    /* Warning: Golden saffron variant */
+    --warning: 38 100% 50%;
+    --warning-foreground: 38 100% 5%;
+
+    /* Muted: Peaceful white/cream */
+    --muted: 40 20% 97%;
+    --muted-foreground: 210 15% 40%;
+
+    --accent: 23 100% 95%;
+    --accent-foreground: 23 100% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 90%;
+    --input: 40 20% 90%;
+    --ring: 23 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Indian voting platform specific colors */
+    --saffron-pride: 23 100% 60%;
+    --ashoka-navy: 210 30% 8%;
+    --independence-green: 125 100% 25%;
+    --heritage-gold: 38 100% 50%;
+    --lotus-purple: 270 50% 40%;
+
+    /* Gradients inspired by Indian heritage */
+    --gradient-tricolor: linear-gradient(135deg, hsl(23 100% 60%), hsl(0 0% 100%), hsl(125 100% 25%));
+    --gradient-saffron: linear-gradient(135deg, hsl(23 100% 60%), hsl(38 100% 50%));
+    --gradient-peaceful: linear-gradient(180deg, hsl(40 20% 97%), hsl(0 0% 100%));
+    --gradient-heritage: linear-gradient(135deg, hsl(125 100% 25%), hsl(210 30% 8%));
+
+    /* Shadows with Indian color essence */
+    --shadow-saffron: 0 10px 30px -10px hsl(23 100% 60% / 0.3);
+    --shadow-heritage: 0 8px 25px -8px hsl(125 100% 25% / 0.4);
+    --shadow-lotus: 0 12px 35px -12px hsl(270 50% 40% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(210 30% 8% / 0.1);
+
+    /* Animations */
+    --transition-democratic: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.2s ease-in-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with Indian heritage colors */
+    --background: 210 30% 6%;
+    --foreground: 40 20% 95%;
+
+    --card: 210 30% 8%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 210 30% 8%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 23 100% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 23 100% 80%;
+
+    --secondary: 210 30% 12%;
+    --secondary-foreground: 40 20% 95%;
+
+    --success: 125 100% 30%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 125 100% 80%;
+
+    --warning: 38 100% 55%;
+    --warning-foreground: 38 100% 5%;
+
+    --muted: 210 30% 12%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 210 30% 12%;
+    --accent-foreground: 23 100% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 12%;
+    --input: 210 30% 12%;
+    --ring: 23 100% 65%;
+
+    /* Dark mode Indian gradients */
+    --gradient-tricolor: linear-gradient(135deg, hsl(23 100% 65%), hsl(210 30% 8%), hsl(125 100% 30%));
+    --gradient-saffron: linear-gradient(135deg, hsl(23 100% 65%), hsl(38 100% 55%));
+    --gradient-peaceful: linear-gradient(180deg, hsl(210 30% 12%), hsl(210 30% 8%));
+    --gradient-heritage: linear-gradient(135deg, hsl(125 100% 30%), hsl(210 30% 8%));
+
+    --sidebar-background: 220 39% 9%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 213 94% 68%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 39% 15%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 220 39% 15%;
+    --sidebar-ring: 213 94% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Indian heritage voting platform utilities */
+  .tricolor-gradient {
+    background: var(--gradient-tricolor);
+  }
+  
+  .saffron-gradient {
+    background: var(--gradient-saffron);
+  }
+  
+  .peaceful-gradient {
+    background: var(--gradient-peaceful);
+  }
+  
+  .heritage-gradient {
+    background: var(--gradient-heritage);
+  }
+
+  .saffron-shadow {
+    box-shadow: var(--shadow-saffron);
+  }
+  
+  .heritage-shadow {
+    box-shadow: var(--shadow-heritage);
+  }
+  
+  .lotus-shadow {
+    box-shadow: var(--shadow-lotus);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+  
+  .democratic-transition {
+    transition: var(--transition-democratic);
+  }
+}
